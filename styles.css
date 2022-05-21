@@ -1,0 +1,230 @@
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-size: 13px;
+    font-family: "Barlow Semi Condensed";
+    background-color: var(--light-gray);
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.container {
+    display: grid;
+    gap: 2em;
+    max-width: 375px;
+    margin: auto;
+    padding: 2em;
+}
+
+.card {
+    padding: 2.25em 2.5em 2.5em;
+    border-radius: 0.75em;
+    box-shadow:  0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+}
+
+.avatar img {
+    width: 3em;
+    border-radius: 50%;
+}
+
+.avatar-info {
+    margin-left: 1.5em;
+}
+
+.avatar-info p {
+    opacity: 0.5;
+}
+
+.main-p {
+    margin: 1em 0;
+    font-size: 1.35rem;
+    font-weight: 500;
+}
+
+.quotes {
+    font-size: 0.875rem;
+    opacity: 0.7;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.25px;
+}
+
+/*Purple card*/
+
+.card-purple {
+    color: var(--light-grayish-blue);
+    background-color: var(--moderate-violet);
+}
+
+.avatar img {
+    border: 2px solid var(--light-grayish-blue);
+}
+
+/*Gray card*/
+
+.card-gray {
+    color: var(--light-grayish-blue);
+    background-color: var(--very-dark-grayish-blue);
+}
+
+.avatar img {
+    border: 2px solid var(--light-grayish-blue);
+}
+
+/*Short white card*/
+
+.card-short-white {
+    color: var(--very-dark-grayish-blue);
+    background-color: var(--white);
+}
+
+.card-short-white .avatar img {
+    border: 2px solid var(--very-dark-grayish-blue);
+}
+
+/*Black card*/
+
+.card-black {
+    color: var(--light-grayish-blue);
+    background-color: var(--very-dark-blackish-blue);
+}
+
+.avatar img {
+    border: 2px solid var(--light-grayish-blue);
+}
+
+/*Long white card*/
+
+.card-long-white {
+    color: var(--very-dark-grayish-blue);
+    background-color: var(--white);
+}
+
+.card-long-white .avatar img {
+    border: 2px solid var(--very-dark-grayish-blue);
+}
+
+.reference {
+    padding-bottom: 1em;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: cursive, sans-serif;
+}
+
+.reference a {
+    color: inherit;
+    transition: 0.2s;
+}
+
+.reference a:hover {
+    color: var(--moderate-violet)
+}
+
+@media only screen and (min-width: 768px) {
+
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+    }
+
+    /*Purple card*/
+
+    .card-purple {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+    /*Gray card*/
+
+    .card-gray {
+        grid-column: 1;
+    }
+
+    /*Black card*/
+
+    .card-black {
+        grid-column: 1 / span 2;
+    }
+
+    /*Long white card*/
+
+    .card-long-white {
+        grid-column: 1 / span 2;
+        grid-row: 4;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1300px;
+    }
+
+    /*Purple card*/
+
+    .card-purple {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+    /*Gray card*/
+
+    .card-gray {
+        grid-column: 3;
+    }
+
+    /*Black card*/
+
+    .card-black {
+        grid-column: 2 / span 2;
+    }
+
+    /*Long white card*/
+
+    .card-long-white {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+    }
+
+}
+
+
+
+
+
+
